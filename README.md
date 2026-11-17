@@ -2,7 +2,7 @@
 
 ## Dungeon Delver
 
-This repository is Dungeon Delver, a terminal roguelike. It does not contain Headcount or a five-city population game. You pick a name, then descend five floors. Floors 1 through 4 are three fights, one treasure room, and one rest, in a random order. Floor 5 is a rest and then the dragon.
+This repository is Dungeon Delver, a terminal roguelike. It does not contain Headcount or a five-city population game. You pick a name, then descend five floors. Floors 1 through 4 are three fights, one treasure room, and one rest, in a random order. Floor 5 is a rest and then the dragon. Combat rooms use one of four lines: "Torchlight flickers across crude weapon racks lining the walls.", "The stench of blood and decay hits you as you enter.", "Bones crunch beneath your boots in this grim chamber.", or "Crude carvings of monsters mark the damp stone walls." Treasure rooms use one of three: "A dusty chest sits enticingly in the center of the room.", "Something glints in the rubble near the far wall.", or "A skeleton slumps over a small pile of valuables." Rest rooms use one of three: "A surprisingly cozy alcove with a bedroll and a fresh torch.", "A shrine radiates warmth — your wounds begin to close.", or "Clear water trickles from a crack in the wall." The dragon's room always says "The ground trembles as you step into this vast, echoing chamber."
 
 The name is stripped, so a blank name, including spaces only, becomes Hero. You start at 30 HP, attack 8, defense 3, level 1, 0 gold, and 2 potions. The next level costs 20 XP.
 
