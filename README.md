@@ -18,7 +18,7 @@ Your hit is attack plus a roll from -2 to +3, and it never falls below 1. An ene
 
 The Cave Troll's description says "wounds close before your eyes". Its HP does not regenerate. An unknown floor number would draw a Goblin. The game only asks for floors 1 through 5.
 
-Fleeing a fight, including the dragon, does not end the run. The next room still happens. Leaving floor 5, even by fleeing the dragon, is the win. The title still says "A roguelike adventure — five floors, one chance." Floors 1 through 4 are headed "FLOOR n OF 5". Floor 5 is headed "THE DRAGON'S LAIR". The name prompt says "Enter your hero's name". The HP bar is green above half, yellow above a quarter, and red at a quarter or below. Ctrl+C prints "Farewell, adventurer."
+Fleeing a fight, including the dragon, does not end the run. The next room still happens. Leaving floor 5, even by fleeing the dragon, is the win. The title still says "A roguelike adventure — five floors, one chance." Floors 1 through 4 are headed "FLOOR n OF 5". Floor 5 is headed "THE DRAGON'S LAIR". The name prompt says "Enter your hero's name". Every floor, including the first and the dragon's lair, then waits on "Press Enter to descend...". The stats panel is titled "Stats" and its first row is labeled "Hero" even when the name is not Hero. A room panel is titled with the room type in uppercase: COMBAT, TREASURE, REST, or BOSS. The HP bar is 20 characters and is green above half, yellow above a quarter, and red at a quarter or below. The XP bar is 15 characters. Ctrl+C prints "Farewell, adventurer."
 
 ```bash
 pip install -r requirements.txt
