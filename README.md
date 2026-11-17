@@ -16,7 +16,7 @@ Your hit is attack plus a roll from -2 to +3, and it never falls below 1. An ene
 | Cave Troll | 3, 4 | 35 | 13 | 25 | 12–20 |
 | Ancient Dragon | 5 | 60 | 18 | 50 | 30–50 |
 
-Fleeing a fight, including the dragon, does not end the run. The next room still happens. Leaving floor 5, even by fleeing the dragon, is the win. Ctrl+C prints "Farewell, adventurer."
+Fleeing a fight, including the dragon, does not end the run. The next room still happens. Leaving floor 5, even by fleeing the dragon, is the win. The title still says "A roguelike adventure — five floors, one chance." Floors 1 through 4 are headed "FLOOR n OF 5". Floor 5 is headed "THE DRAGON'S LAIR". The name prompt says "Enter your hero's name". The HP bar is green above half, yellow above a quarter, and red at a quarter or below. Ctrl+C prints "Farewell, adventurer."
 
 ```bash
 pip install -r requirements.txt
