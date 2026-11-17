@@ -16,14 +16,14 @@ Your hit is attack plus a roll from -2 to +3, and it never falls below 1. An ene
 | Cave Troll | 3, 4 | 35 | 13 | 25 | 12–20 |
 | Ancient Dragon | 5 | 60 | 18 | 50 | 30–50 |
 
-Clearing floor 5 is the win.
+Fleeing a fight, including the dragon, does not end the run. The next room still happens. Leaving floor 5, even by fleeing the dragon, is the win. Ctrl+C prints "Farewell, adventurer."
 
 ```bash
 pip install -r requirements.txt
 python main.py
 ```
 
-In a fight: `A` attack, `P` drink a potion, `F` flee. A flee succeeds when the draw is below 0.5, and then the enemy does not hit. A failed flee, an empty potion, and a potion drunk at full HP all still take the enemy's hit.
+In a fight: `A` attack, `P` drink a potion, `F` flee. A flee succeeds when the draw is below 0.5, and then the enemy does not hit. A failed flee, an empty potion, and a potion drunk at full HP all still take the enemy's hit. A successful flee does not award XP or gold.
 
 ```bash
 pytest
