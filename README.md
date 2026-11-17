@@ -23,7 +23,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-In a fight: `A` attack, `P` drink a potion, `F` flee. A flee succeeds when the draw is below 0.5, and then the enemy does not hit. A failed flee, an empty potion, and a potion drunk at full HP all still take the enemy's hit. A successful flee does not award XP or gold.
+In a fight the prompt's choices are lowercase `a`, `p`, and `f`. The screen prints [A]ttack, [P]otion, and [F]lee. Pressing Enter attacks, because the default is `a`. A flee succeeds when the draw is below 0.5, and then the enemy does not hit. A failed flee, an empty potion, and a potion drunk at full HP all still take the enemy's hit. A successful flee does not award XP or gold. At full HP a rest says "You rest, but your HP is already full." The level-up panel says "ATK +3 · DEF +1 · HP fully restored" and does not mention the +10 max HP. Death is titled "GAME OVER" and says "YOU HAVE FALLEN", with gold and level. The win is titled "DUNGEON CLEARED" and shows level, gold, and HP remaining.
 
 ```bash
 pytest
