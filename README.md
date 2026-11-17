@@ -31,4 +31,4 @@ In a fight the prompt's choices are lowercase `a`, `p`, and `f`. The screen prin
 pytest
 ```
 
-The game code is `main.py` and `game/`. Tests are in `tests/`.
+The game code is `main.py` and `game/`. Tests are in `tests/`. They never import `main.py`, so they do not run a fight, a flee, or a room. `test_take_damage_subtracts_defense` expects `take_damage(8)` with defense 3 to return 5 and leave 25 HP. `test_take_damage_minimum_one` expects `take_damage(5)` with defense 100 to return 1 and leave 29 HP. `test_gain_xp_triggers_level_up` checks that `gain_xp(20)` returns true, the level is 2, and HP equals max HP. It does not check that max HP is 40, attack is 11, or defense is 4. The combat tests patch `random.randint` and check only `player_damage` and `enemy_damage`.
