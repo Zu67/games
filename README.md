@@ -4,9 +4,9 @@
 
 This repository is Dungeon Delver, a terminal roguelike. It does not contain Headcount or a five-city population game. You pick a name, then descend five floors. Floors 1 through 4 are three fights, one treasure room, and one rest, in a random order. Floor 5 is a rest and then the dragon.
 
-A blank name becomes Hero. You start at 30 HP, attack 8, defense 3, level 1, 0 gold, and 2 potions. The next level costs 20 XP.
+The name is stripped, so a blank name, including spaces only, becomes Hero. You start at 30 HP, attack 8, defense 3, level 1, 0 gold, and 2 potions. The next level costs 20 XP.
 
-Your hit is attack plus a roll from -2 to +3, and it never falls below 1. An enemy hit is that enemy's attack plus the same roll, then defense is subtracted once, and it also never falls below 1. A potion heals 15 HP, up to your maximum. At full HP the potion is still used, the heal is 0, and the message says you have no potions left. A rest heals 15 HP and does not use a potion. Treasure is a potion 40% of the time. Otherwise it is gold equal to a roll from 5 to 20, multiplied by the floor. Winning a fight adds that enemy's XP and gold. A fight can raise your level only once. Leftover XP stays, and the next level costs the old requirement times 1.6, rounded down. A level-up adds 10 max HP, refills HP, and adds 3 attack and 1 defense.
+Your hit is attack plus a roll from -2 to +3, and it never falls below 1. An enemy hit is that enemy's attack plus the same roll, then defense is subtracted once, and it also never falls below 1. A potion heals 15 HP, up to your maximum. At full HP the potion is still used, the heal is 0, and the message says you have no potions left. A rest heals 15 HP and does not use a potion. Treasure is a potion 40% of the time. Otherwise it is gold equal to a roll from 5 to 20, multiplied by the floor. Winning a fight adds that enemy's XP and gold. A fight calls `gain_xp` once, so it can raise your level only once. Leftover XP stays, and the next level costs the old requirement times 1.6, rounded down. That leftover can already meet the new requirement. A dragon's 50 XP added to 19 XP leaves 49 toward a requirement of 32, and the next `gain_xp` call levels you again, including a call that adds 0. A level-up adds 10 max HP, refills HP, and adds 3 attack and 1 defense.
 
 | Enemy | Floors | HP | Attack | XP | Gold |
 | --- | --- | --- | --- | --- | --- |
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-In a fight the prompt's choices are lowercase `a`, `p`, and `f`. The screen prints [A]ttack, [P]otion, and [F]lee. Any other letter is rejected and the prompt repeats. Pressing Enter attacks, because the default is `a`. A flee succeeds when the draw is below 0.5, and then the enemy does not hit. A failed flee, an empty potion, and a potion drunk at full HP all still take the enemy's hit. A successful flee does not award XP or gold. At full HP a rest says "You rest, but your HP is already full." The level-up panel says "ATK +3 · DEF +1 · HP fully restored" and does not mention the +10 max HP. Death is titled "GAME OVER" and says "YOU HAVE FALLEN", with gold and level. The win is titled "DUNGEON CLEARED" and shows level, gold, and HP remaining.
+In a fight the prompt's choices are lowercase `a`, `p`, and `f`. The screen prints [A]ttack, [P]otion, and [F]lee. The potion label includes the count. At 0 it is dimmed and still accepted. Any other letter is rejected and the prompt repeats. Pressing Enter attacks, because the default is `a`. A flee succeeds when the draw is below 0.5, and then the enemy does not hit. A failed flee, an empty potion, and a potion drunk at full HP all still take the enemy's hit. A successful flee does not award XP or gold. At full HP a rest says "You rest, but your HP is already full." The level-up panel says "ATK +3 · DEF +1 · HP fully restored" and does not mention the +10 max HP. Death is titled "GAME OVER" and says "YOU HAVE FALLEN", with gold and level. The win is titled "DUNGEON CLEARED" and shows level, gold, and HP remaining.
 
 ```bash
 pytest
