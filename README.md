@@ -2,7 +2,7 @@
 
 ## Dungeon Delver
 
-A terminal roguelike. You pick a name, then descend five floors. Floors 1 through 4 are three fights, one treasure room, and one rest, in a random order. Floor 5 is a rest and then the dragon.
+This repository is Dungeon Delver, a terminal roguelike. It does not contain Headcount or a five-city population game. You pick a name, then descend five floors. Floors 1 through 4 are three fights, one treasure room, and one rest, in a random order. Floor 5 is a rest and then the dragon.
 
 A blank name becomes Hero. You start at 30 HP, attack 8, defense 3, level 1, 0 gold, and 2 potions. The next level costs 20 XP.
 
