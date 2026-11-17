@@ -14,9 +14,9 @@ Your hit is attack plus a roll from -2 to +3, and it never falls below 1. An ene
 | Skeleton | 1, 2, 3 | 15 | 7 | 10 | 5–10 |
 | Orc Warrior | 2, 3, 4 | 22 | 10 | 15 | 8–15 |
 | Cave Troll | 3, 4 | 35 | 13 | 25 | 12–20 |
+| Ancient Dragon | 5 | 60 | 18 | 50 | 30–50 |
 
 The Cave Troll's description says "wounds close before your eyes". Its HP does not regenerate. An unknown floor number would draw a Goblin. The game only asks for floors 1 through 5.
-| Ancient Dragon | 5 | 60 | 18 | 50 | 30–50 |
 
 Fleeing a fight, including the dragon, does not end the run. The next room still happens. Leaving floor 5, even by fleeing the dragon, is the win. The title still says "A roguelike adventure — five floors, one chance." Floors 1 through 4 are headed "FLOOR n OF 5". Floor 5 is headed "THE DRAGON'S LAIR". The name prompt says "Enter your hero's name". The HP bar is green above half, yellow above a quarter, and red at a quarter or below. Ctrl+C prints "Farewell, adventurer."
 
